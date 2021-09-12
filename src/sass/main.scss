@@ -3,5 +3,11 @@
 // Importera partial för nollställning av CSS
 @import 'reset';
 
+// Importera partial för grundfilen
+@import 'base';
+
+// Importera partial för layout
+@import 'layout';
+
 // Importera partial för komponenter
 @import 'component';
