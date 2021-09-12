@@ -1,0 +1,7 @@
+// I denna filen importeras alla övriga scss-filer
+
+// Importera partial för nollställning av CSS
+@import 'reset';
+
+// Importera partial för komponenter
+@import 'component';
