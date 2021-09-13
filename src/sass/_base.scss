@@ -1,2 +1,18 @@
 // GRUNDFIL
-// Variabler, mixins, övrigt
+
+// Allmän övergångsanimation
+* {
+    transition: 0.2s;
+}
+
+// Variabel för bakgrundsfärg
+$background: #F1F1F1;
+
+// Variabel för mörk textfärg
+$dark-text: #2B2B2B;
+
+// Variabel för grundfärg
+$base-color: #FDEB7F;
+
+// Variabel för komplementsfärg
+$comp-color: #1A09D9;

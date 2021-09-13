@@ -1,0 +1,21 @@
+// Importera typsnitt
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h4, h4, h5, h6 {
+    color: $dark-text;
+}
+
+.cta {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+button {
+    color: $background;
+    font-size: 1.3rem;
+}
