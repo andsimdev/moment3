@@ -1,8 +1,9 @@
-// HTML-element
+// HTML-ELEMENT
 const backgroundimgEl = document.getElementById("backgroundimg");
 
-// Funktioner
+// FUNKTIONER
 
+// Funktion för att välja kanintemat
 function rabbitTheme() {
     console.log("Kör kanintemat...");
     // Ändra bakgrundsbild till kaninen
@@ -11,6 +12,7 @@ function rabbitTheme() {
     backgroundimgEl.style.objectPosition = "";
 }
 
+// Funktion för att välja hundtemat
 function dogTheme() {
     console.log("Kör hundtemat...");
     // Ändra bakgrundsbild till hunden
@@ -19,6 +21,7 @@ function dogTheme() {
     backgroundimgEl.style.objectPosition = "25% 0";
 }
 
+// Funktion för att välja kattemat
 function catTheme() {
     console.log("Kör kattemat...");
     // Ändra bakgrundsbild till katten
@@ -27,9 +30,7 @@ function catTheme() {
     backgroundimgEl.style.objectPosition = "0 100%";
 }
 
-
-
-
+// Funktion för att ändra tema
 function changeAnimal() {
     // Spara källan för aktuell bakgrundsbild
     let srcstring = backgroundimgEl.src;
