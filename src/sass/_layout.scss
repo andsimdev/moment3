@@ -6,13 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     background: $background;
-    padding: 5%;
+    padding: 6.5%;
     height: 100vh;
     width: 100vw;
 }
 
 // Bakgrundscirklar
-.smallcircle {
+.bigcircle {
     position: absolute;
     top: -200px;
     left: -200px;
@@ -20,13 +20,36 @@ body {
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    background-color: $comp-color;
+    background-color: transparentize($comp-color, 0.7);
 }
 
+.smallcircle {
+    position: absolute;
+    bottom: 0vh;
+    left: 40vh;
+    z-index: -200;
+    width: 275px;
+    height: 275px;
+    border-radius: 50%;
+    background-color: transparentize($base-color, 0.8);
+}
+
+.backgroundimg {
+    position: fixed;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 115vh;
+    height: 115vh;
+    right: -300px;
+    top: -7.5vh;
+    overflow: hidden;
+    z-index: -100;
+}
 
 // Huvudmenyn
 nav {
     width: 40%;
+    max-width: 550px;
     float: right;
 
     ul {
@@ -53,8 +76,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 225px;
     width: 500px;
+    h1 {
+        margin-bottom: 2%;
+    }
     button {
         width: 350px;
         height: 50px;

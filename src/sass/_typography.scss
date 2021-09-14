@@ -12,6 +12,11 @@ h1, h2, h4, h4, h5, h6 {
 .cta {
     h1 {
         font-size: 4rem;
+        font-weight: 500;
+    }
+    h2 {
+        color: lighten($color: $dark-text, $amount: 20%);
+        font-weight: 400;
     }
 }
 

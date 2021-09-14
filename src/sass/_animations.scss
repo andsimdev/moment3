@@ -1,0 +1,56 @@
+// Animering för att förstora
+@keyframes scaleup {
+    from {transform: scale(1);}
+    to {
+        transform: scale(1.35);
+        opacity: 0.5;
+    }
+}
+
+.bigcircle {
+    animation-name: scaleup;
+    animation-duration: 35s;
+    animation-delay: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+// Animering för att förminska
+@keyframes scaledown {
+    from {transform: scale(1);}
+    to {
+        transform: scale(0.75);
+        transform: (translate(350px, -450px));
+    }
+}
+
+.smallcircle {
+    animation-name: scaledown;
+    animation-duration: 28s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+// Animering för att markera CTA-knapp
+@keyframes cta {
+    0% {
+        box-shadow: 0 0 0 0 $comp-color;
+    }
+    10% {
+        box-shadow: 0 0 20px 2px $comp-color;
+    }
+    20% {
+        box-shadow: 0 0 0 0 $comp-color;
+    }
+    100% {
+        box-shadow: 0 0 0 0 $comp-color;
+    }
+}
+
+.ctabtn {
+    animation-name: cta;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+}
