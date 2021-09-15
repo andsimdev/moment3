@@ -15,4 +15,4 @@ $dark-text: #2B2B2B;
 $base-color: #FDEB7F;
 
 // Variabel för komplementsfärg
-$comp-color: darken(complement($base-color), 32%);
+$comp-color: darken(complement($base-color), 20%);

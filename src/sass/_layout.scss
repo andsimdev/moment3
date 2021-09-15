@@ -40,7 +40,7 @@ body {
     border-radius: 50%;
     width: 115vh;
     height: 115vh;
-    right: -300px;
+    right: -35vh;
     top: -7.5vh;
     overflow: hidden;
     z-index: -100;
@@ -48,15 +48,38 @@ body {
 
 // Huvudmenyn
 nav {
-    width: 40%;
-    max-width: 550px;
-    float: right;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: none;
+    max-width: 225px;
+    border-radius: 25px;
+    padding: 45px;
+    padding-top: 25px;
+    padding-right: 25px;
 
+        // Menyknapp
+        #menubtn {
+            float: right;
+            background: none;
+            box-shadow: none;
+            border-radius: 50%;
+            color: #F1F1F1;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+    // Menylistan
     ul {
         width: 100%;
+        height: 250px;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         list-style-type: none;
+        margin-top: 75px;
 
         li {
 
@@ -82,7 +105,35 @@ nav {
         margin-bottom: 2%;
     }
     button {
-        width: 350px;
+        width: 300px;
         height: 50px;
+        font-size: 1.2rem;
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+// Knapp för mörkt läge
+.darkmodebtn {
+    @extend #menubtn;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background: $dark-text;
+    box-shadow: 1px 1px 2px rgba($color: #000000, $alpha: 0.3);
+    margin-left: 30px;
+    height: 35px;
+    width: 35px;
+    padding: 0;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        background: lighten($color: $dark-text, $amount: 10);
+        transform: scale(1);
     }
 }

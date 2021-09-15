@@ -35,16 +35,16 @@
 // Animering för att markera CTA-knapp
 @keyframes cta {
     0% {
-        box-shadow: 0 0 0 0 $comp-color;
+        box-shadow: 0 0 0 0 white;
     }
     10% {
-        box-shadow: 0 0 20px 2px $comp-color;
+        box-shadow: 0 0 15px 5px white;
     }
     20% {
-        box-shadow: 0 0 0 0 $comp-color;
+        box-shadow: 0 0 0 0 white;
     }
     100% {
-        box-shadow: 0 0 0 0 $comp-color;
+        box-shadow: 0 0 0 0 white;
     }
 }
 
