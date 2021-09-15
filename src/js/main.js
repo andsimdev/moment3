@@ -10,11 +10,14 @@ const navEl = document.getElementById("mainnav");
 const navulEl = document.getElementById("mainnavul");
 const menuiconEl = document.getElementById("menuicon");
 const menuitemsEl = document.getElementsByClassName("menuitem");
+
+// Ange mörkt läge av som standard
 let darkmode = false;
+
+// Ange menyn visad som standard för att den ska stängas vid laddning av sidan
 let menushown = true;
 
 // FUNKTIONER
-
 // Funktion för att välja kanintemat
 function rabbitTheme() {
     // Ändra bakgrundsbild till kaninen
@@ -85,34 +88,55 @@ function changeAnimal() {
 function darkMode() {
     // Kontrollera om mörkt läge är av
     if (darkmode == false) {
+
+        // Sätt mörk bakgrundsfärg
         document.body.style.backgroundColor = "#2B2B2B";
+
+        // Sätt ljusa rubriker
         ctah1El.style.color = "#F1F1F1";
         ctah2El.style.color = "#F1F1F1";
-        // KONTROLLERA OM MENYN ÄR UTE
+
+        // Kontrollera om menyn är ute
         if (menushown == true) {
+
             // Lägg på bakgrundsfärg på menyn
             navEl.style.backgroundColor = "#2B2B2B";
+
             // Lägg ljus färg på menylänkar
             for (let i = 0; i < menuitemsEl.length; i++) {
                 menuitemsEl[i].style.color = "#F1F1F1";
             }
+
+            // Ändra ikon till ljus
             menuiconEl.src = "images/closelight.svg";
         }
+
+        // Ange mörkt läge sant
         darkmode = true;
+
     } else {
+
+        // Återställ färger
         document.body.style.backgroundColor = "";
         ctah1El.style.color = "";
         ctah2El.style.color = "";
-        // KONTROLLERA OM MENYN ÄR UTE
+
+        // Kontrollera om menyn är ute
         if (menushown == true) {
+
             // Lägg på bakgrundsfärg på menyn
             navEl.style.backgroundColor = "#F1F1F1";
+
             // Återställ färg på menylänkar
             for (let i = 0; i < menuitemsEl.length; i++) {
                 menuitemsEl[i].style.color = "";
             }
+
+            // Ändra ikon till standard
             menuiconEl.src = "images/close.svg";
         }
+
+        // Ange mörkt läge falskt
         darkmode = false;
     }
 }
@@ -123,36 +147,52 @@ function toggleMenu() {
 
         // Kontrollera om mörkt eller ljust läge valts
         if (darkmode == true) {
-            // Använd mörk bakgrundsfärg
+            
             // Lägg på bakgrundsfärg på menyn
             navEl.style.backgroundColor = "#2B2B2B";
+
             // Lägg ljus färg på menylänkar
             for (let i = 0; i < menuitemsEl.length; i++) {
                 menuitemsEl[i].style.color = "#F1F1F1";
             }
+
+            // Ändra ikon till ljus
             menuiconEl.src = "images/closelight.svg";
+
         } else {
-            // Använd ljus bakgrundsfärg
+            
             // Lägg på bakgrundsfärg på menyn
             navEl.style.backgroundColor = "#F1F1F1";
+
             // Återställ färg på menylänkar
             for (let i = 0; i < menuitemsEl.length; i++) {
                 menuitemsEl[i].style.color = "";
             }
 
+            // Ändra till ikon för att stänga menyn
             menuiconEl.src = "images/close.svg";
         }
+
+        // Visa menylistan
         navulEl.style.display = "flex";
+
+        // Ange "menyn visas" som sant
         menushown = true;
 
     } else {
         // Ta bort bakgrundsfärg på menyn
         navEl.style.backgroundColor = "";
+
+        // Dölj menylistan
         navulEl.style.display = "none";
+
+        // Sätt menyikonen till standard
         menuiconEl.src = "images/menu.svg";
+
+        // Ange "menyn visas" som falskt
         menushown = false;
     }
 }
 
-// Kör toggleMenu en gång för att stänga menyn vid inladdning
+// Kör toggleMenu en gång vid laddning av sidan för att stänga menyn vid inladdning
 window.onload = toggleMenu();

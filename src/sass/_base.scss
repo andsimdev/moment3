@@ -15,4 +15,10 @@ $dark-text: #2B2B2B;
 $base-color: #FDEB7F;
 
 // Variabel för komplementsfärg
-$comp-color: darken(complement($base-color), 20%);
+$comp-color: darken(complement($base-color), 5%);
+
+// Variable för att visa eller dölja underrubrik
+$showh2: true;
+
+// Variabel för större huvudrubrik
+$largeh1: false;
