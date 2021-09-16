@@ -22,3 +22,10 @@ $showh2: true;
 
 // Variabel för större huvudrubrik
 $largeh1: false;
+
+// Mixin med media query för mobilstorlek
+@mixin phone {
+    @media screen and(max-width: 600px){
+        @content;
+    }
+}

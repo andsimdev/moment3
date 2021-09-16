@@ -22,6 +22,7 @@ h1, h2, h4, h4, h5, h6 {
     }
 
     h2 {
+        position: relative;
         // Kontrollera om variabeln för att visa underrubrik är sann
         @if $showh2 {
             color: lighten($color: $dark-text, $amount: 20%);
@@ -29,6 +30,8 @@ h1, h2, h4, h4, h5, h6 {
         } @else {
             display: none;
         }
+        max-width: 100%;
+        
 }
 
 button {

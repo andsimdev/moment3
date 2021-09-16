@@ -9,6 +9,13 @@ body {
     padding: 6.5%;
     height: 100vh;
     width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+    @include phone {
+        padding: 5%;
+    }
 }
 
 // Bakgrundscirklar
@@ -21,6 +28,13 @@ body {
     height: 600px;
     border-radius: 50%;
     background-color: transparentize($comp-color, 0.7);
+
+    @include phone {
+        width: 400px;
+        height: 400px;
+        top: -100px;
+        left: -100px;
+    }
 }
 
 .smallcircle {
@@ -32,6 +46,13 @@ body {
     height: 275px;
     border-radius: 50%;
     background-color: transparentize($base-color, 0.8);
+    overflow: hidden;
+    
+
+    @include phone {
+        left: -5vw;
+        bottom: 0;
+    }
 }
 
 .backgroundimg {
@@ -42,8 +63,14 @@ body {
     height: 115vh;
     right: -35vh;
     top: -7.5vh;
-    overflow: hidden;
     z-index: -100;
+
+    @include phone {
+        width: 105vw;
+        height: 105vw;
+        top: 50vh;
+        right: -15vw;
+    }
 }
 
 // Huvudmenyn
@@ -57,6 +84,12 @@ nav {
     padding: 45px;
     padding-top: 25px;
     padding-right: 25px;
+    z-index: 500;
+
+    @include phone {
+        top: 30px;
+        right: 30px;
+    }
 
         // Menyknapp
         #menubtn {
@@ -101,6 +134,10 @@ nav {
     justify-content: space-between;
     height: 225px;
     width: 500px;
+
+    @include phone {
+        margin-left: 0;
+    }
     
     h1 {
         margin-bottom: 2%;
