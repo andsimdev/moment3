@@ -42,7 +42,7 @@ function dogTheme() {
     // Modifiera texten
     animalSpanEl.innerHTML = "hund";
     // Ändra färg på bakgrundscirklar
-    bigcircleEl.style.backgroundColor = "rgba(9, 205, 217, 0.1)";
+    bigcircleEl.style.backgroundColor = "rgba(9, 205, 217, 0.2)";
     smallcircleEl.style.backgroundColor = "rgba(224, 135, 53, 0.1)";
     // Ändra färg på knapp
     ctabtnEl.style.backgroundColor = "rgb(9, 205, 217)";
