@@ -176,6 +176,9 @@ function toggleMenu() {
         // Visa menylistan
         navulEl.style.display = "flex";
 
+        // Lägg till skugga runt menyn
+        navEl.style.boxShadow = "5px 5px 20px 1px #00000033";
+
         // Ange "menyn visas" som sant
         menushown = true;
 
@@ -188,6 +191,9 @@ function toggleMenu() {
 
         // Sätt menyikonen till standard
         menuiconEl.src = "images/menu.svg";
+
+        // Ta bort skugga runt menyn
+        navEl.style.boxShadow = "";
 
         // Ange "menyn visas" som falskt
         menushown = false;

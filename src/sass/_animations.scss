@@ -2,7 +2,7 @@
 @keyframes scaleup {
     from {transform: scale(1);}
     to {
-        transform: scale(1.35);
+        transform: scale(1.25);
         opacity: 0.5;
     }
 }
@@ -24,8 +24,19 @@
     }
 }
 
+@keyframes scaledown_phone {
+    from {transform: scale(1);}
+    to {
+        transform: scale(0.75);
+        transform: (translate(50px, -200px));
+    }
+}
+
 .smallcircle {
     animation-name: scaledown;
+    @include phone {
+        animation-name: scaledown_phone;
+    }
     animation-duration: 28s;
     animation-delay: 1s;
     animation-direction: alternate;
